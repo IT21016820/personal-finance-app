@@ -2,7 +2,7 @@ import './globals.css'; // Tailwind/global styles
 import Navbar from '../components/Navbar/navbar.jsx'; // ✅ Import Navbar
 
 export const metadata = {
-  title: 'Finance Tracker',
+  title: 'FinGuard',
   description: 'Manage your money smartly',
 };
 

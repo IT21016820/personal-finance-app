@@ -7,10 +7,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-900 text-white shadow-md">
+    <nav className="bg-[#60A5FA] text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold">
-          Finance Tracker
+          FinGuard
         </Link>
         <button
           className="md:hidden focus:outline-none"
@@ -27,6 +27,9 @@ export default function Navbar() {
           </Link>
           <Link href="/transactions" className="block py-2 md:inline-block hover:text-blue-300">
             Transactions
+          </Link>
+          <Link href="/about-us" className="block py-2 md:inline-block hover:text-blue-300">
+            About Us
           </Link>
         </div>
       </div>

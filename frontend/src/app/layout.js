@@ -1,5 +1,9 @@
 import './globals.css'; // Tailwind/global styles
 import Navbar from '../components/Navbar/navbar.jsx'; // ✅ Import Navbar
+import Footer from '../components/Footer/footer.jsx'; // ✅ Import Footer
+import React from 'react';
+import { Inter } from 'next/font/google';
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'FinGuard',
@@ -13,6 +17,7 @@ export default function RootLayout({ children }) {
         <Navbar /> {/* ✅ Add Navbar at the top */}
         <main className="p-6">{children}</main>
       </body>
+      <Footer />
     </html>
   );
 }

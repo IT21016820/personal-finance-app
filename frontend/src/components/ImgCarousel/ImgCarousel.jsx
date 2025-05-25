@@ -40,10 +40,10 @@ export default function ImgCarousel() {
       </div>
 
       {/* Optional buttons */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex gap-4 z-10">
+      {/* <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex gap-4 z-10">
         <button onClick={scrollPrev} className="px-4 py-2 bg-blue-600 text-white rounded">Prev</button>
         <button onClick={scrollNext} className="px-4 py-2 bg-blue-600 text-white rounded">Next</button>
-      </div>
+      </div> */}
     </div>
   );
 }

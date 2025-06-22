@@ -14,10 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-gray-50 text-gray-900">
-        <Navbar /> {/* ✅ Add Navbar at the top */}
-        <main className="p-6">{children}</main>
+        <Navbar />
+        <main className="p-6 min-h-screen">{children}</main>
+        <Footer /> {/* ✅ Now inside body */}
       </body>
-      <Footer />
     </html>
   );
 }

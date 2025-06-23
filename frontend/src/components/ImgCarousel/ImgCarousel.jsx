@@ -21,14 +21,14 @@ export default function ImgCarousel() {
     <div className="bg-[#FFF0E9] w-full overflow-hidden">
       <div ref={emblaRef} className="overflow-hidden">
         <div className="flex">
-          <div className="flex-shrink-0 w-full aspect-[16/9]">
+          <div className="flex-shrink-0 w-full h-[600px]">
             <img
               src="/images/dashimg1.jpg"
               alt="Budget"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="flex-shrink-0 w-full aspect-[16/9]">
+          <div className="flex-shrink-0 w-full h-[600px]">
             <img
               src="/images/dashimg2.jpg"
               alt="Savings"

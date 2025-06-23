@@ -35,39 +35,41 @@ export default function AboutPage() {
       <section className="max-w-6xl mx-auto px-4 py-10">
         <h3 className="text-xl font-semibold mb-6 text-center">Meet the Team</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {[
-            {
-              name: 'Ashani Dewmini',
-              role: 'Founder & Developer',
-              img: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80',
-            },
-            {
-              name: 'John Smith',
-              role: 'UI/UX Designer',
-              img: 'https://images.unsplash.com/photo-1628890927584-46053d8df67b?auto=format&fit=crop&w=400&q=80',
-            },
-            {
-              name: 'Emily Johnson',
-              role: 'Marketing Specialist',
-              img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
-            },
-          ].map((member, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center"
-            >
-              <Image
-                src={member.img}
-                alt={member.name}
-                width={100}
-                height={100}
-                className="rounded-full object-cover mb-4"
-              />
-              <h4 className="text-lg font-semibold">{member.name}</h4>
-              <p className="text-sm text-gray-500">{member.role}</p>
-            </div>
-          ))}
-        </div>
+  {[
+    {
+      name: 'Ashani Dewmini',
+      role: 'Founder & Developer',
+      img: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80',
+    },
+    {
+      name: 'John Smith',
+      role: 'UI/UX Designer',
+      img: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80',
+    },
+    {
+      name: 'Emily Johnson',
+      role: 'Marketing Specialist',
+      img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
+    },
+  ].map((member, idx) => (
+    <div
+      key={idx}
+      className="bg-blue-50 rounded-2xl shadow-md p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-blue-300"
+    >
+      <div className="relative w-28 h-28 mb-4">
+        <Image
+          src={member.img}
+          alt={member.name}
+          fill
+          className="rounded-full object-cover border-4 border-blue-300 shadow-lg"
+        />
+      </div>
+      <h4 className="text-xl font-semibold text-blue-900">{member.name}</h4>
+      <p className="text-sm text-blue-600 mt-1">{member.role}</p>
+    </div>
+  ))}
+</div>
+
       </section>
     </main>
   );

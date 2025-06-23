@@ -7,7 +7,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#60A5FA] text-white shadow-md">
+    <nav className="bg-blue-950 text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold">
           FinGuard

@@ -1,18 +1,74 @@
-import React from "react";
+'use client';
 
-const AboutUs = () => (
-    <main style={{ maxWidth: 600, margin: "2rem auto", padding: "1rem" }}>
-        <h1>About Us</h1>
-        <p>
-            Welcome to Personal Finance App! Our mission is to help you manage your finances with ease and confidence.
+import Image from 'next/image';
+
+export default function AboutPage() {
+  return (
+    <main className="min-h-screen bg-white text-gray-800">
+      {/* Hero Section */}
+      <section className="relative w-full h-[300px] md:h-[400px] overflow-hidden">
+        <Image
+          src="/images/about.jpg"
+          alt="Finance Team"
+          layout="fill"
+          objectFit="cover"
+          className="opacity-80"
+        />
+        <div className="absolute inset-0 bg-blue-500 bg-opacity-40 flex items-center justify-center">
+          <h1 className="text-white text-4xl md:text-5xl font-bold">About Us</h1>
+        </div>
+      </section>
+
+      {/* About Description */}
+      <section className="max-w-5xl mx-auto py-12 px-4 text-center">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+          Empowering Your Financial Future
+        </h2>
+        <p className="text-gray-600 text-lg">
+          We are a passionate team committed to making personal finance simple, intuitive, and impactful.
+          Our platform is built for everyday users looking to gain control over their expenses, savings,
+          and future goals.
         </p>
-        <p>
-            We believe everyone deserves simple tools to track spending, set budgets, and achieve financial goals. Our team is passionate about making personal finance accessible for all.
-        </p>
-        <p>
-            Thank you for choosing us to be part of your financial journey!
-        </p>
+      </section>
+
+      {/* Team Section */}
+      <section className="max-w-6xl mx-auto px-4 py-10">
+        <h3 className="text-xl font-semibold mb-6 text-center">Meet the Team</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {[
+            {
+              name: 'Ashani Dewmini',
+              role: 'Founder & Developer',
+              img: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80',
+            },
+            {
+              name: 'John Smith',
+              role: 'UI/UX Designer',
+              img: 'https://images.unsplash.com/photo-1628890927584-46053d8df67b?auto=format&fit=crop&w=400&q=80',
+            },
+            {
+              name: 'Emily Johnson',
+              role: 'Marketing Specialist',
+              img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
+            },
+          ].map((member, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center"
+            >
+              <Image
+                src={member.img}
+                alt={member.name}
+                width={100}
+                height={100}
+                className="rounded-full object-cover mb-4"
+              />
+              <h4 className="text-lg font-semibold">{member.name}</h4>
+              <p className="text-sm text-gray-500">{member.role}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
-);
-
-export default AboutUs;
+  );
+}

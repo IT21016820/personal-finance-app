@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-gray-50 text-gray-900">
         <Navbar />
-        <main className="p-6 min-h-screen">{children}</main>
+        <main className="m-0 p-0 min-h-screen">{children}</main>
         <Footer /> {/* ✅ Now inside body */}
       </body>
     </html>

@@ -14,7 +14,7 @@ export default function WelcomeSection() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-center px-4">
+      <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center text-center px-4">
         <div className="text-white max-w-2xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Welcome to FinGuard
